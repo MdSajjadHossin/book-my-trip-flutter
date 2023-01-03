@@ -8,7 +8,7 @@ class Styles {
   static Color primaryColor = primary;
   static Color textColor = const Color(0xFF3b3b3b);
   static Color bgColor = const Color(0xFFeeedf2);
-  static Color ornageColor = const Color(0xFF526799);
+  static Color ornageColor = const Color(0xFFF37B67);
   static TextStyle textStyle =
       TextStyle(fontSize: 16, fontWeight: FontWeight.w500, color: textColor);
   static TextStyle headLineStyle =
