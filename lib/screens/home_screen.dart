@@ -1,3 +1,4 @@
+import 'package:book_my_trip/screens/hotel_screen.dart';
 import 'package:book_my_trip/screens/ticket_view.dart';
 import 'package:book_my_trip/utils/app_styles.dart';
 import 'package:fluentui_icons/fluentui_icons.dart';
@@ -97,6 +98,40 @@ class HomeScreen extends StatelessWidget {
               children: const [
                 TicketView(),
                 TicketView(),
+              ],
+            ),
+          ),
+          const Gap(20),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  "Hotels",
+                  style: Styles.headLineStyle2,
+                ),
+                InkWell(
+                  onTap: () => {print("You Are Tapped")},
+                  child: Text(
+                    "View All",
+                    style:
+                        Styles.textStyle.copyWith(color: Styles.primaryColor),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const Gap(15),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            padding: const EdgeInsets.only(left: 20),
+            child: Row(
+              children: const [
+                HotelScreen(),
+                HotelScreen(),
+                HotelScreen(),
+                HotelScreen(),
               ],
             ),
           )
