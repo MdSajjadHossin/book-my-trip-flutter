@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-
 import '../utils/app_layout.dart';
 import '../utils/app_styles.dart';
 
 class IconTextWidget extends StatelessWidget {
-  const IconTextWidget({super.key});
+  final IconData icon;
+  final String text;
+  const IconTextWidget({super.key, required this.icon, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -18,15 +19,15 @@ class IconTextWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(AppLayout.GetWidth(10))),
       child: Row(
         children: [
-          const Icon(
-            Icons.flight_takeoff_rounded,
+          Icon(
+            icon,
             color: Color(0xFFBFC2DF),
           ),
           Gap(
             AppLayout.GetWidth(15),
           ),
           Text(
-            "Departure",
+            text,
             style: Styles.textStyle,
           )
         ],
