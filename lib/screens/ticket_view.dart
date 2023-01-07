@@ -115,22 +115,28 @@ class TicketView extends StatelessWidget {
                               width: AppLayout.GetWidth(100),
                               child: Text(
                                 ticket['from']['name'],
-                                style: Styles.headLineStyle4
-                                    .copyWith(color: Colors.white),
+                                style: isColor == null
+                                    ? Styles.headLineStyle4
+                                        .copyWith(color: Colors.white)
+                                    : Styles.headLineStyle4,
                               ),
                             ),
                             Text(
                               ticket['flying_time'],
-                              style: Styles.headLineStyle4
-                                  .copyWith(color: Colors.white),
+                              style: isColor == null
+                                  ? Styles.headLineStyle4
+                                      .copyWith(color: Colors.white)
+                                  : Styles.headLineStyle4,
                             ),
                             SizedBox(
                               width: AppLayout.GetWidth(100),
                               child: Text(
                                 ticket['to']['name'],
                                 textAlign: TextAlign.end,
-                                style: Styles.headLineStyle4
-                                    .copyWith(color: Colors.white),
+                                style: isColor == null
+                                    ? Styles.headLineStyle4
+                                        .copyWith(color: Colors.white)
+                                    : Styles.headLineStyle4,
                               ),
                             ),
                           ],
@@ -140,7 +146,7 @@ class TicketView extends StatelessWidget {
                   ),
                   // ------------------middle layer of ticket-------------
                   Container(
-                    color: Styles.ornageColor,
+                    color: isColor == null ? Styles.ornageColor : Colors.white,
                     child: Row(
                       children: [
                         SizedBox(
@@ -169,12 +175,14 @@ class TicketView extends StatelessWidget {
                                 mainAxisSize: MainAxisSize.max,
                                 children: List.generate(
                                   (constraints.constrainWidth() / 15).floor(),
-                                  (index) => const SizedBox(
+                                  (index) => SizedBox(
                                     width: 5,
                                     height: 1,
                                     child: DecoratedBox(
-                                      decoration:
-                                          BoxDecoration(color: Colors.white),
+                                      decoration: BoxDecoration(
+                                          color: isColor == null
+                                              ? Colors.white
+                                              : Colors.grey.shade300),
                                     ),
                                   ),
                                 ),
@@ -201,7 +209,8 @@ class TicketView extends StatelessWidget {
                   // ---------------------titcket bottom layer-------------
                   Container(
                     decoration: BoxDecoration(
-                      color: Styles.ornageColor,
+                      color:
+                          isColor == null ? Styles.ornageColor : Colors.white,
                       borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(21),
                         bottomRight: Radius.circular(21),
