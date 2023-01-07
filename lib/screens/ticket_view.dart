@@ -40,7 +40,7 @@ class TicketView extends StatelessWidget {
                           children: [
                             Text(
                               ticket['from']['code'],
-                              style: isColor == num
+                              style: isColor == null
                                   ? Styles.headLineStyle3
                                       .copyWith(color: Colors.white)
                                   : Styles.headLineStyle3,
@@ -228,14 +228,18 @@ class TicketView extends StatelessWidget {
                               children: [
                                 Text(
                                   ticket['date'],
-                                  style: Styles.headLineStyle3
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle3
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle3,
                                 ),
                                 const Gap(5),
                                 Text(
                                   "Date",
-                                  style: Styles.headLineStyle4
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle4
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle4,
                                 )
                               ],
                             ),
@@ -244,14 +248,18 @@ class TicketView extends StatelessWidget {
                               children: [
                                 Text(
                                   ticket['departure_time'],
-                                  style: Styles.headLineStyle3
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle3
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle3,
                                 ),
                                 const Gap(5),
                                 Text(
                                   "Departure time",
-                                  style: Styles.headLineStyle4
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle4
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle4,
                                 )
                               ],
                             ),
@@ -260,14 +268,18 @@ class TicketView extends StatelessWidget {
                               children: [
                                 Text(
                                   ticket["number"].toString(),
-                                  style: Styles.headLineStyle3
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle3
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle3,
                                 ),
                                 const Gap(5),
                                 Text(
                                   "Nnumber",
-                                  style: Styles.headLineStyle4
-                                      .copyWith(color: Colors.white),
+                                  style: isColor == null
+                                      ? Styles.headLineStyle4
+                                          .copyWith(color: Colors.white)
+                                      : Styles.headLineStyle4,
                                 )
                               ],
                             ),
